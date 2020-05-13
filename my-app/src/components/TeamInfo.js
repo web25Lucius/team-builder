@@ -1,17 +1,29 @@
 import React , {useState} from 'react';
-import TeamCard from './TeamCard';
+import logo from '../logo.svg';
 
-const [name, setName] = useState(teamArr);
-const teamArr = ["Jose", "Caleb", "Donny", "Gabriellia", "Raul", "Tony"];
+// const teamArr = ["Jose", "Caleb", "Donny", "Gabriellia", "Raul", "Tony"];
 
 const TeamInfo = ()=> {
-return (
-    <div>
-    {name.map((teamMember => {
-        return <TeamCard firstName={teamMember}/>
-    }))}
-    </div>
-)
+    const [name, setName] = useState(["Matthew", "Raul"]);
+    return (
+            <div>
+                <header className="App-header">
+                {name.map(( teamMember)=> {
+                    return (
+                            <div>
+                            {/* {console.log(teamMember)} */}
+                            {/* {props.firstname ? props.firstname : <span>Ramona</span>} */}
+                            <p> {teamMember} is learning &nbsp;
+                            <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">React</a>
+                            <img src={logo} className="App-logo" alt="logo" key={teamMember}/>
+                            </p> 
+                            </div>
+                        )
+                })}
+                </header>
+            </div>
+            )
+
 }
 
 export default TeamInfo;

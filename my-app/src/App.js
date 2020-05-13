@@ -1,10 +1,11 @@
 import React from 'react';
-import TeamCard from './components/TeamCard'
+// import TeamCard from './components/TeamCard'
 import './App.css';
+import TeamInfo from './components/TeamInfo';
 
-function App() {
+function App(props) {
   return (
-    <TeamCard />
+    <TeamInfo>{props.firstName} {props.src}</TeamInfo>
   );
 }
 
