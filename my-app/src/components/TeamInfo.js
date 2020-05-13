@@ -13,9 +13,10 @@ const TeamInfo = ()=> {
                             <div>
                             {/* {console.log(teamMember)} */}
                             {/* {props.firstname ? props.firstname : <span>Ramona</span>} */}
-                            <p> {teamMember} is learning &nbsp;
-                            <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">React</a>
-                            <img src={logo} className="App-logo" alt="logo" key={teamMember}/>
+                            <p> 
+                                <img src={logo} className="App-logo" alt="logo" key={teamMember}/>
+                                {teamMember} is learning &nbsp;
+                                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">React</a>
                             </p> 
                             </div>
                         )
