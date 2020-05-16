@@ -1,14 +1,21 @@
 import React from 'react';
 import HomeTeam from './components/HomeTeam';
 import './App.css';
+import TeamInfo from './components/TeamInfo';
+// import TeamForm from './components/TeamForm';
+import { Route } from 'react-router-dom';
 
 
 
 function App() {
   return (
     <div>
-        
-      <HomeTeam />
+       <Route exact path="/">
+         <HomeTeam />
+      </Route>
+      <Route exact path="/TeamInfo">
+        <TeamInfo />
+      </Route>
       
     </div>
   );
